@@ -94,7 +94,7 @@
                 <artifactId>maven</artifactId>
                 <version>4.1.17</version>
                 <configuration>
-                    <pactBrokerUrl>http://localhost:9292</pactBrokerUrl>
+                    <pactBrokerUrl>http://localhost:3292</pactBrokerUrl>
                     <pactBrokerUsername>pact_workshop</pactBrokerUsername>
                     <pactBrokerPassword>pact_workshop</pactBrokerPassword>
                     <tags>
