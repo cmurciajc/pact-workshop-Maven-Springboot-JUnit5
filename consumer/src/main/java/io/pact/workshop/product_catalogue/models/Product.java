@@ -9,4 +9,5 @@ public class Product {
   private final String type;
   private final String version;
   private final String code;
+  private final String reference;
 }

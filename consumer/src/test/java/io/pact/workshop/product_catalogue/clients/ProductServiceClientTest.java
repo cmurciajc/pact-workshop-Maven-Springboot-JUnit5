@@ -42,13 +42,15 @@ class ProductServiceClientTest {
             "                \"id\": 9,\n" +
             "                \"type\": \"CREDIT_CARD\",\n" +
             "                \"name\": \"GEM Visa\",\n" +
-            "                \"version\": \"v2\"\n" +
+            "                \"version\": \"v2\",\n" +
+            "                \"reference\": \"STANDARD\"\n" +
             "            },\n" +
             "            {\n" +
             "                \"id\": 10,\n" +
             "                \"type\": \"CREDIT_CARD\",\n" +
             "                \"name\": \"28 Degrees\",\n" +
-            "                \"version\": \"v1\"\n" +
+            "                \"version\": \"v1\",\n" +
+            "                \"reference\": \"STANDARD\"\n" +
             "            }\n" +
             "        ]\n" +
             "\n}")
@@ -72,12 +74,13 @@ class ProductServiceClientTest {
             "            \"id\": 10,\n" +
             "            \"type\": \"CREDIT_CARD\",\n" +
             "            \"name\": \"28 Degrees\",\n" +
-            "            \"version\": \"v1\"\n" +
+            "            \"version\": \"v1\",\n" +
+            "            \"reference\": \"STANDARD\"\n" +
             "        }\n")
           .withHeader("Content-Type", "application/json"))
     );
 
     Product product = productServiceClient.getProductById(10);
-    assertThat(product, is(equalTo(new Product(10L, "28 Degrees", "CREDIT_CARD", "v1", null))));
+    assertThat(product, is(equalTo(new Product(10L, "28 Degrees", "CREDIT_CARD", "v1", null,"STANDARD"))));
   }
 }
