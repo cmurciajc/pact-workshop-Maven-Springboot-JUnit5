@@ -19,4 +19,5 @@ public class Product {
   private String version;
   private String code;
   private String reference;
+  private String owner;
 }
